@@ -1,4 +1,13 @@
-## Welcome to GitHub Pages
+## How to ETL data from MariaDB to SQL Server using SSIS
+
+We all know about SSIS. Its a great tool to make a data integration from a database system to another one, or from a flat file to a database system, and also from/to HDFS. However, the only thing that is missing in SSIS is the real time data integration such as Kafka.
+
+In this quick steps, we will send data from MariaDB to SQL server using SSIS tool, we will first make a full data integration, then the daily data integration and finally we will upload the work to SQL server in order to run them automatically in every time unite.
+
+## Create the SSIS project
+Make sure that you have installed Visual studio 2019.
+In order to start a SSIS project, you have your Visual Studio 2019 installation. follow the instructions in this link.
+https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-ver15
 
 You can use the [editor on GitHub](https://github.com/mbmasadeh/MariaDBToSQLServer-DataIntegration/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
