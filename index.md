@@ -5,9 +5,16 @@ We all know about SSIS. Its a great tool to make a data integration from a datab
 In this quick steps, we will send data from MariaDB to SQL server using SSIS tool, we will first make a full data integration, then the daily data integration and finally we will upload the work to SQL server in order to run them automatically in every time unite.
 
 ## Create the SSIS project
-Make sure that you have installed Visual studio 2019.
-In order to start a SSIS project, you have your Visual Studio 2019 installation. follow the instructions in this link.
+- Make sure that you have installed Visual studio 2019.
+- In order to start a SSIS project, you have your Visual Studio 2019 installation. Follow the instructions in this link
 [SSIS Setup](https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-ver15)
+- Make sure to download and install the [Integration Service](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects).
+- Right click on visual studio 2019 and run it as an admin.
+- Create a new project.
+- In the search text above write "Integration Services Project", then finish the Wizard.
+
+## Setup the ODBC engine
+We can contact MariaDB via serveral method, the free one is by ODBC engine
 
 You can use the [editor on GitHub](https://github.com/mbmasadeh/MariaDBToSQLServer-DataIntegration/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
