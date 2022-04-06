@@ -33,13 +33,34 @@ In this quick steps, we will send data from SQL Server to MariaDB using SSIS too
 - Select the Database you want to connect with from the drop down list, then finish the system till the end.
 - Now the Connector is ready to be used in SSIS.
 
-## SSIS ODBC connector
+## Table information between the two DB systems
+<p>In order to copy the data between the databases, you need to create a table in the destionation database in order to get all the upcoming records inside it. You have to be aware about the columns number, name and data type. For example if the is a column name "ID" and datatype is "int" as a primary key, the same column with the same specifications must be locatedc in the destination database table.</p>
+
+## SSIS ODBC connector, SQL Server OLE DB Provider
 - In the Visual studio, open the SSIS project you created back in the first step.
 - In the left menu, drag and drop "Data Flow Task" to the working space.
 - Double click on the "Data flow task", after rename it if required.
 - We will make a data integration from SQL Server to MariaDB, so our source is "Source Assistant".
-- 
-- 
+- A pop-up window ill open to you to select the database engine you want to connect with, from the list select SQL server, then press on "New..." on the right.
+- In the "Server or file name" field, write down the SQL server IP Address.
+- In the "Log on to the server" section, select the login type you want.
+- From the "Initial catalog" drop down list, select the database name you want to connect with.
+- Click "test connection" to validate the connection, the click on "OK".
+- Right click on the same "Source Assistant" and select edit.
+- Select the table name you want to get the data from. you can write an SQL statement instead.
+- Click on "Preview" button to see the data saple inside the selected table.
+- Click on "OK"
+<p>Now the SQL Server connection is ready to fetch the records, now lets setup the destination of these records, is Maria DB ODBC.<
+
+- From the SSIS Toolbox, select ODBC Destination, right click on it and select "Edit".
+- Click on "New" button to setup a new connection.
+- Since we dont have a "Data connections" profile yet, we have to create a new on by click on "New" button.
+- From the "Data source specification, select the profile name you created back in "Setup the MariaDB connector" step.
+- Write the username and the password, test your connection then click "OK", and also "OK".
+- Choose the "Data access mode" to be "Table Name-Batch".
+- Select the Table Name.
+- Since we didnt match the arrow between the Source database and the destination one, click "OK", go to the "OLE DB Source", get the blue arrow to hit the "ODBC Destination", then open the "ODBC Destination agaon, go to the "Mapping" to map each column from source table to the destionation one.
+-  Now everything looks good, right click in the working field and select "Execute task".
 
 You can use the [editor on GitHub](https://github.com/mbmasadeh/MariaDBToSQLServer-DataIntegration/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
