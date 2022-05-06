@@ -1,4 +1,4 @@
-## How to ETL data from SQL Server to MariaDB using SSIS
+## How to integrate data between SQL Server and MariaDB using SSIS
 
 We all know about SSIS. Its a great tool to make a data integration between systems and folders. However, the only thing that is missing in SSIS is the real time data integration such as Kafka.
 
